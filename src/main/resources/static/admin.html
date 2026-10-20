@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Painel – Cabeleleila Leila</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Fraunces:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <span class="logo">Cabeleleila Leila</span>
+    <nav class="nav" aria-label="Administração">
+      <a href="admin.html" aria-current="page">Painel</a>
+      <a href="agendar.html">Agendar</a>
+      <a href="meus-agendamentos.html">Meus agendamentos</a>
+      <button type="button" id="btn-sair" class="btn-secondary">Sair</button>
+    </nav>
+  </header>
+
+  <div id="mensagem" class="toast" role="status" aria-live="polite" hidden></div>
+
+  <main class="container stack">
+    <h1 id="titulo-semana">Desempenho semanal</h1>
+
+    <section class="kpis" aria-label="Resumo da semana">
+      <div class="card kpi"><span class="muted">Agendamentos</span><strong id="kpi-total">—</strong></div>
+      <div class="card kpi"><span class="muted">Concluídos</span><strong id="kpi-concluidos">—</strong></div>
+      <div class="card kpi"><span class="muted">Cancelados</span><strong id="kpi-cancelados">—</strong></div>
+      <div class="card kpi"><span class="muted">Faturamento</span><strong id="kpi-faturamento">—</strong></div>
+    </section>
+
+    <section class="card">
+      <h2>Serviços mais pedidos</h2>
+      <ol id="lista-servicos-populares" class="itens"></ol>
+    </section>
+
+    <section class="card tabela">
+      <h2>Agendamentos recebidos</h2>
+      <table>
+        <thead>
+          <tr><th>Cliente</th><th>Data e hora</th><th>Serviços</th><th>Status</th><th>Ações</th></tr>
+        </thead>
+        <tbody id="lista-admin-agendamentos"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script type="module" src="js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Agendar – Cabeleleila Leila</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Fraunces:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="topbar">
+    <span class="logo">Cabeleleila Leila</span>
+    <nav class="nav" aria-label="Principal">
+        <a href="agendar.html" aria-current="page">Agendar</a>
+        <a href="meus-agendamentos.html">Meus agendamentos</a>
+        <a href="admin.html">Área da Leila</a>
+        <a href="agendar.html" id="btn-sair">Sair</a>
+    </nav>
+</header>
+
+<!-- Elemento para mostrar sucesso/erro -->
+<div id="mensagem" class="toast" role="status" aria-live="polite" hidden></div>
+
+<main class="container layout">
+    <section class="principal" aria-labelledby="titulo">
+        <h1 id="titulo">Novo agendamento</h1>
+        <p class="muted">Escolha um ou mais serviços.</p>
+
+        <div id="lista-servicos" class="stack">
+
+        </div>
+    </section>
+
+    <aside class="card lateral painel">
+        <div id="sugestao-semana" class="sugestao" hidden>
+            <strong>Você já tem um agendamento nesta semana</strong>
+            <p id="sugestao-texto">Quarta, 21/10/2026 às 14:00. Deseja marcar estes serviços na mesma data?</p>
+            <div class="acoes">
+                <button type="button" id="aceitar-sugestao" class="btn">Usar esta data</button>
+                <button type="button" id="recusar-sugestao" class="btn-secondary">Outra data</button>
+            </div>
+        </div>
+
+        <form id="form-agendamento" class="painel">
+            <div class="field"><label for="data">Data</label><input id="data" name="data" type="date" required></div>
+            <div class="field"><label for="hora">Horário</label>
+                <select id="hora" name="hora" required><option value="">Selecione</option></select></div>
+            <div class="total"><span>Total</span><output id="total">R$ 0,00</output></div>
+            <button type="submit" class="btn">Confirmar agendamento</button>
+        </form>
+    </aside>
+</main>
+
+
+<script type="module" src="js/app.js"></script>
+</body>
+</html>

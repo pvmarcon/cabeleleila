@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Meus agendamentos – Cabeleleila Leila</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Fraunces:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="topbar">
+    <span class="logo">Cabeleleila Leila</span>
+    <nav class="nav" aria-label="Principal">
+        <a href="agendar.html">Agendar</a>
+        <a href="meus-agendamentos.html" aria-current="page">Meus agendamentos</a>
+        <a href="admin.html">Área da Leila</a>
+        <a href="index.html" id="btn-sair">Sair</a>
+    </nav>
+</header>
+
+<div id="mensagem" class="toast" role="status" aria-live="polite" hidden></div>
+
+<main class="container stack">
+    <h1>Meus agendamentos</h1>
+
+    <form id="form-filtro" class="filtro">
+        <div class="field"><label for="de">De</label><input id="de" name="de" type="date"></div>
+        <div class="field"><label for="ate">Até</label><input id="ate" name="ate" type="date"></div>
+        <button type="submit" class="btn">Filtrar</button>
+    </form>
+
+    <div id="lista-agendamentos" class="stack">
+
+    </div>
+</main>
+
+<script type="module" src="js/history.js"></script>
+</body>
+</html>
